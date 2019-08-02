@@ -1,0 +1,182 @@
+@import "./base.less";
+.auction-page {
+    position: relative;
+    width: 100%;
+    min-height: 667px;
+    padding: 12px 15px;
+    background: @blue;
+
+    .search-area {
+        position: relative;
+        background: #fff;
+        height: 34px;
+        border-radius: 4px;
+        .search-btn {
+            position: absolute;
+            width: 29px;
+            right: 14px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(53,116,250,1);
+            cursor: pointer;
+        }
+        input {
+            position: absolute;
+            display: block;
+            padding: 5px 14px;
+            line-height: 24px;
+            border: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    }
+
+    .auction-area {
+        background: #fff;
+        border-radius: 8px;
+        margin-top: 15px;
+        .list-title {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(102,102,102,1);
+            background: rgba(248,248,248,1);
+            text-align: center;
+        }
+        .offer-price-account {
+            padding: 0 15px;
+        }
+        .auction-coin {
+            height: 50px;
+            position: relative;
+            input.auction-price {
+                height: 100%;
+                background: rgba(255,255,255,1);
+                padding: 5px 58px 5px 15px;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 40px;
+                display: block;
+                width: 100%;
+                color: rgba(53,116,250,1);
+                border: none;
+            }
+            .coin-unit {
+                position: absolute;
+                top: 13px;
+                right: 16px;
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(51,51,51,1);
+                line-height: 24px;
+            }
+        }
+
+        &.has-auction {
+            .offer-price-account {
+                .offer-item {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 500;
+
+                    .term {
+                        color: rgba(102,102,102,1);
+                        margin-right: auto;
+                    }
+                    .result {
+                        color: rgba(51,51,51,1);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .btn-area {
+            margin: 20px 0 0;
+            padding-bottom: 20px;
+            text-align: center;
+            .btn-auction {
+                width: 256px;
+                height: 48px;
+                background: rgba(53,116,250,1);
+                border-radius: 4px;
+                line-height: 48/16;
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+
+    .auction-account-list {
+        background: #fff;
+        margin-top: 15px;
+        border-radius: 8px;
+
+        .list-title {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            color:rgba(51,51,51,1);
+            text-align: center;
+            background: rgba(248,248,248,1);
+        }
+
+        .account-list {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            height: 50px;
+            padding: 0 15px;
+            border-bottom: 1px solid rgba(247,247,247,1);
+            &:last-of-type {
+                border-bottom: none;
+            }
+            .account {
+                margin-right: auto;
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(53,116,250,1);
+            }
+            .auction-num {
+                font-size: 16px;
+                font-weight: 500;
+                color: rgba(102,102,102,1);
+            }
+        }
+    }
+
+    .auction-introduction {
+        margin-top: 49px;
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(255,255,255,1);
+            line-height: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255,255,255,1);
+            line-height: 18px;
+        }
+    }
+}
+
+.border-8 {
+    border-radius: 8px 8px 0 0;
+}
+
+

@@ -1,0 +1,143 @@
+@import "./base.less";
+.page-register {
+    border-top: 1px solid rgba(243,244,244,1);
+    padding: 15px 16px 0;
+}
+
+.input-area {
+    position: relative;
+    margin-bottom: 16px;
+    .input-top {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        margin-bottom: 4px;
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(48,48,48,1);
+            margin-right: auto;
+        }
+        .fee {
+            height: 24px;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(102,102,102,1);
+            line-height: 24px;
+        }
+        .input-account {
+            display: block;
+            width: 100%;
+            height: 52px;
+            padding-right: 24px;
+        }
+        em {
+            font-style: normal;
+            color: @blue;
+        }
+    }
+    .unit-select-area {
+        position: absolute;
+        top: 62px;
+        right: -8px;
+        width: 78px;
+        height: 78px;
+        background: transparent url("../img/bg_drop_down.png") no-repeat;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+            width: 100%;
+            height: 100%;
+            padding: 5% 0;
+            li {
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+                color:rgba(153,153,153,1);
+                line-height: 1;
+                width: 100%;
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.active {
+                    color: rgba(53,116,250,1);
+                }
+
+            }
+        }
+    }
+    .tag {
+        position: absolute;
+        bottom: 15px;
+        right: 9px;
+        //width: 14px;
+        height: 22px;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(51,51,51,1);
+        line-height: 22px;
+        .icon-arrow {
+            width: 10px;
+            height: 10px;
+            background: url("../img/icon_arrow.png") no-repeat;
+            display: inline-block;
+            margin-left: 7px;
+            transform: rotate(180deg);
+            transition: all .3s;
+            .active {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.about-register {
+    margin-top: 4px;
+    background: rgba(248,248,248,1);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(153,153,153,1);
+    line-height: 18px;
+    padding: 19px 11px 10px 11px;
+    .about-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+        &.price-title {
+            margin-top: 15px;
+        }
+    }
+    .account-price-list {
+        .price-list {
+            width: 50%;
+            float: left;
+            display: flex;
+            align-items: center;
+            padding-right: 60px;
+            .account-byte {
+                margin-right: auto;
+            }
+        }
+    }
+    .account-price-list {
+        overflow: hidden;
+    }
+
+}
+
+.register-area {
+    margin: 109px auto 0;
+    width: 323px;
+    .btn-register {
+        width: 100%;
+        height: 55px;
+        padding: 5px 0;
+        font-size: 16px;
+        line-height: 45/16;
+        box-shadow: 0 2px 4px 0 rgba(216,216,216,0.5);
+        border-radius: 4px;
+    }
+}

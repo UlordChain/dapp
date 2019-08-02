@@ -1,0 +1,340 @@
+@import "./base.less";
+html, body {
+    line-height: 1;
+    color: #323233;
+    font-size: 16px;
+    background-color: #fff;
+    font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+input, button, textarea {
+    font: inherit;
+    color: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    &.base-input {
+        width: 100%;
+        background: rgba(251,251,251,1);
+        border-radius: 4px;
+        border: 1px solid rgba(216,216,216,1);
+        transition: all 0.3s;
+        height: 52px;
+        padding: 5px 10px;
+        line-height: 42px;
+        font-size: 16px;
+        color: #333;
+        &:focus {
+            background: rgba(238,245,255,1);
+            border: 1px solid rgba(199,218,244,1);
+        }
+    }
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.page {
+    //padding-top: 10px;
+}
+
+i.icon {
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    &.icon-auction {
+        background: url("../img/auction.png") no-repeat no-repeat center center;
+        background-size: 100% 100%;
+    }
+    &.icon-about {
+        background: url("../img/about.png") no-repeat no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+}
+.van-tabs--line {
+    padding-top: 50px;
+}
+.van-tabs--line .van-tabs__wrap {
+    height: 50px;
+    background: rgba(248,249,250,1);
+}
+.van-tabs__line {
+    width: 72px;
+    height: 2px;
+    background: rgba(51, 51, 51, 1);
+}
+.van-tab {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(153,153,153,1);
+}
+.van-tab--active {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(68, 68, 68, 1);
+}
+.van-checkbox__icon .van-icon {
+    border: 1px solid #979797;
+    width: 18px;
+    height: 18px;
+}
+.van-checkbox__icon--checked .van-icon {
+    border: 1px solid transparent;
+}
+.van-checkbox__icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: rgba(255,255,255,1);
+    border: 1px solid rgba(151,151,151,1);
+    * {
+        display: none;
+    }
+    border-radius: 100%;
+
+    &.van-checkbox__icon--checked {
+        background: url("../img/icon_selection_b.png") no-repeat center center;
+        background-size: 100% 100%;
+        border: none;
+    }
+}
+
+.van-dialog.ios-dialog {
+    width: 280px;
+    border-radius: 14px;
+    top: 2.5rem;
+    transform: translate3d(-50%, 0, 0);
+    .van-dialog__footer {
+        .van-button {
+            border-top: 1px solid #BEC5D3;
+            border-right: 1px solid #BEC5D3;
+            &.van-dialog__confirm {
+                border-left: none;
+                border-right: none;
+            }
+        }
+        .van-button__text {
+            font-size: 17px;
+            font-weight: bold;
+            color: rgba(0,122,255,1);
+        }
+    }
+}
+.van-dialog__message {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(0,0,0,1);
+    line-height: 16px;
+    text-align: left;
+    padding: 16px 12px;
+}
+.van-overlay {
+    background: rgba(0,0,0,0.4);
+}
+.van-button--large {
+    line-height: 44px;
+    height: 44px;
+}
+
+.confirm-modal {
+    //padding: 0 16px 24px;
+    padding: 0 0 24px;
+    position: relative;
+    .open-pop-up {
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 10px;
+        background: url("../img/chacha_tanchuang.png") center center no-repeat;
+    }
+    .title {
+        font-size: 17px;
+        font-weight: bold;
+        color: rgba(48,48,48,1);
+        line-height: 44px;
+        height: 44px;
+        text-align: center;
+        border-bottom: 1px solid rgba(247,247,247,1);
+    }
+    .center-area {
+        .params-item {
+            border-bottom: 1px solid rgba(247,247,247,1);
+            padding: 0 16px 0;
+            overflow: hidden;
+            &.first-item {
+                height: 50px;
+                line-height: 50px;
+            }
+            .item-name {
+                float: left;
+                font-size: 16px;
+                font-weight: 500;
+                color: rgba(102,102,102,1);
+            }
+            .item-value {
+                float: right;
+                font-size: 16px;
+                font-weight: 600;
+                color: rgba(51,51,51,1);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 2.6rem;
+            }
+            .item-value-list {
+                float: right;
+                > div {
+                    text-align: right;
+                    height: 48px;
+                    margin-bottom: 8px;
+                    line-height: 24px;
+                    .params {
+                        color: #666666;
+                    }
+                    .value {
+                        color: #333;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .btn-auction {
+        display: block;
+        width: 323px;
+        height: 55px;
+        background: rgba(53,116,250,1);
+        box-shadow: 0 2px 4px 0 rgba(216,216,216,0.5);
+        border-radius: 4px;
+        margin: 25px auto 0;
+        font-size: 16px;
+    }
+
+    &.vote-modal {
+        height: 428px;
+        .center-area {
+            padding: 0 16px 0;
+            margin-top: 37px;
+            p {
+                height: 14px;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(48,48,48,1);
+                line-height: 14px;
+                margin-bottom: 9px;
+                &.intro {
+                    margin-top: 2px;
+                    height: 24px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: rgba(48,48,48,1);
+                    line-height: 24px;
+                }
+            }
+        }
+        .btn-auction {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+    &.key-pop-up {
+        height: 428px;
+        .btn-auction {
+            margin-top: 73px;
+        }
+        .center-area {
+            padding: 0 16px 0;
+            p {
+                height: 14px;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(48,48,48,1);
+                line-height: 14px;
+                margin-top: 37px;
+                &.word {
+                    margin-top: 21px;
+                }
+            }
+            .vote-key-area {
+                width: 343px;
+                height: 64px;
+                background: rgba(251,251,251,1);
+                border-radius: 4px;
+                border: 1px solid rgba(216,216,216,1);
+                padding: 8px 11px;
+                position: relative;
+                margin-top: 9px;
+                .private-key {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(51,51,51,1);
+                    line-height: 24px;
+                    word-break: break-word;
+                }
+                .copy-icon {
+                    position: absolute;
+                    bottom: -10px;
+                    right: -16px;
+                    background: url(../img/icon_copy.png) center center no-repeat;
+                    background-size: 14px 14px;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    &.transact-pop-up {
+        height: 428px;
+        .price {
+            margin-top: 30px;
+            text-align: center;
+            height: 24px;
+            font-size: 28px;
+            font-weight: 700;
+            color: rgba(51,51,51,1);
+            line-height: 24px;
+        }
+        .RMB-price {
+            text-align: center;
+            height: 17px;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgba(153,153,153,1);
+            line-height: 17px;
+            margin-bottom: 9px;
+        }
+        .btn-auction {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.van-popup--bottom {
+    // 解决vant popup-bottom出现1px偏差的bug
+    left: 50%;
+    width: 100%;
+    left: calc(50% - 1px);
+    width: calc(100% + 1px);
+}
+.van-tabs__nav {
+    background: rgba(248,249,250,1);
+}
+
