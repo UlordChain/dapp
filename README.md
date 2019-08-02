@@ -1,5 +1,4 @@
-# ulord-dapp 
-### uos dapp demo
+# ulord-dapp
 
 > A Vue.js project
 
